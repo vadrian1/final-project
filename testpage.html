@@ -4,16 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Test Page</title>
 </head>
 <body>
-    <header></header>
+    <header>
+        <h1>Adrian's <span style="color: #AA77F5">Website</span></h1>
+        <div class="hamDiv">
+            <button id="hamButt" onclick="menuHide()">
+                &#9776;
+            </button>
+        </div>
+        <div class="break"></div>
+        <nav id="menu" class="menu">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="music.html">Music</a>
+            <a href="blogs.html">Blog</a>
+            <a id="active" href="testpage.html">Test Page</a>
+        </nav>
+    </header>
     <main>
-        <h1>Test page</h1>
-        <div>
-            
+        <div class="contentBody">
+            <h1>Testing Page: Testing Styling on Elements in Multiple Views</h1>
+            <p class="date">Adrian Vergara, April 11th 2024</p>
+            <p>This page is for testing: Here I am laying out many different elements so I can style them in my different views</p>
+            <h2>H2 Heading: What's the deal with airplane food?</h2>
+            <h3>H3 Heading: Nested deeper</h3>
+            <h4>H4 Heading:</h4>
+            <h5>H5 Heading</h5>
+            <h6>H6 Heading:</h6>
         </div>
     </main>
+    <script src="javascript/js.js"></script>
 </body>
 </html>

@@ -1,0 +1,74 @@
+*, a, h1{ 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    /* background-color: #7f36db; */
+    background-color: #181818;
+    align-items: center;
+    position:sticky;
+    color: white;
+    border-bottom: 2px solid #7f36db;
+}
+header h1{
+    text-align: center;
+    padding: 10px;
+}
+body{
+    background-color: #181818;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background: white;
+    width: 100%;
+}
+.menu a, .menu a:visited{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+#active {
+    background-color: #eee0ff;
+    color: #450a8f;
+    font-weight: bold;
+}
+
+.hamDiv{
+    flex: 1;
+    margin-left: auto;
+    margin-right: 5px;
+    height: 30px;
+    text-align: right;
+}
+#hamButt{
+    background-color: #7f36db;
+    height: 100%;
+    width: 30px;
+    border-radius: 3px;
+    border:none
+}
+/* Everything above is header / nav menu stuff*/
+/* Actual content */
+
+main > div.contentBody{
+    background-color: white;
+    text: black;
+    margin: 3%;
+    border-radius: 5px;
+    padding: 30px;
+}
+div.contentBody h1{
+    padding: 6px;
+    font-size: 30px;
+}
+.date{
+    font-style: italic;
+}
+
+.hidden{
+    display:none;
+}
