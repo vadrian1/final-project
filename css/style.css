@@ -13,6 +13,7 @@ header{
     border-bottom: 2px solid #7f36db;
 }
 header h1{
+    color: white;
     text-align: center;
     padding: 10px;
 }
@@ -53,20 +54,91 @@ body{
 }
 /* Everything above is header / nav menu stuff*/
 /* Actual content */
+main > h1{
+    margin: 20px;
+    margin-left: 5%;
+}
+h1{
+    color: #eee0ff;
+    font-size: 40px;
+}
 
-main > div.contentBody{
+.blogContent > div{
     background-color: white;
     text: black;
     margin: 3%;
     border-radius: 5px;
     padding: 30px;
 }
-div.contentBody h1{
+.blogContent h1{
     padding: 6px;
     font-size: 30px;
 }
 .date{
     font-style: italic;
+}
+button{
+    background-color: #7f36db;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+.blogContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.blogItem{
+    height: 200px;
+    background-color:#7f36db ;
+    width: 80%;
+    border-radius: 20px;
+    position: relative;
+}
+.blogItem h1{
+    color:white;
+    margin: 5%;
+}
+.blogItem p{
+    margin: 5%;
+    padding: 20px;
+    background-color: #eee0ff;
+}
+.blogItem a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* COMMENTS */
+#commentText{
+    width: 100%;
+}
+#commentName{
+    height: 20px;
+}
+.comment{
+    text:black;
+    border-bottom: 1px solid #450a8f;
+    padding: 10px;
+}
+.comment h3{
+    font-size: small;
+    font-style: italic;
+}
+.comment p{
+    font-size: small;
+    
+}
+
+
+/* Desktop view */
+@media screen and (min-width: 1200px) {
+    .menu{
+        flex-direction: row;
+    }
 }
 
 .hidden{

@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Test Page</title>
+    <title id="title">Test Page</title>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-database-compat.js"></script>
+
 </head>
 <body>
     <header>
@@ -21,11 +24,12 @@
             <a href="projects.html">Projects</a>
             <a href="music.html">Music</a>
             <a href="blogs.html">Blog</a>
+            <a href="aboutme.html">About Me</a>
             <a id="active" href="testpage.html">Test Page</a>
         </nav>
     </header>
-    <main>
-        <div class="contentBody">
+    <main class="blogContent">
+        <div >
             <h1>Testing Page: Testing Styling on Elements in Multiple Views</h1>
             <p class="date">Adrian Vergara, April 11th 2024</p>
             <p>This page is for testing: Here I am laying out many different elements so I can style them in my different views</p>
@@ -35,7 +39,32 @@
             <h5>H5 Heading</h5>
             <h6>H6 Heading:</h6>
         </div>
+        <div class="comments">
+            <h1>Comment Section</h1>
+            <ul id="commentList"></ul>
+            <form id="commentForm">
+                <textarea id="commentText" placeholder="Leave a comment!" required></textarea>
+                <textarea id="commentName" placeholder="Name" required></textarea>
+                <br>
+                <button type="submit">Post!</button>
+            </form>
+        </div>
     </main>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDj8hNodl7qCiTelyj__N-MU66824Jk2d0",
+            authDomain: "final-project-comments-d8668.firebaseapp.com",
+            projectId: "final-project-comments-d8668",
+            storageBucket: "final-project-comments-d8668.appspot.com",
+            messagingSenderId: "972053304876",
+            appId: "1:972053304876:web:fae8815584b6fe813f2389",
+            measurementId: "G-1VLWWFV9SQ"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+    </script>
     <script src="javascript/js.js"></script>
+    <script type = "module" src="javascript/comments.js"></script>
+    
 </body>
 </html>
