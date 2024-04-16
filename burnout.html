@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title id="title">Creative Burnout</title>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-database-compat.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>Adrian's <span style="color: #AA77F5">Website</span></h1>
+        <div class="hamDiv">
+            <button id="hamButt" onclick="menuHide()">
+                &#9776;
+            </button>
+        </div>
+        <div class="break"></div>
+        <nav id="menu" class="menu">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="music.html">Music</a>
+            <a href="blogs.html">Blog</a>
+            <a href="aboutme.html">About Me</a>
+        </nav>
+    </header>
+    <main class="blogContent">
+        <div>
+            <h1>Creative Burnout</h1>
+            <p class="date">Adrian Vergara, April 15th 2024</p>
+            <img src="https://images.unsplash.com/photo-1501772418-b33899635bca?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="woman on train with her head down">
+            <p>Everyone has experienced burnout. Whether it was work, school, or something similar, burnout can happen in any aspect of life. The official definition of burnout is: <em>to cause to fail, wear out, or become exhausted especially from overwork or overuse</em>. And it's not something that is isolated to one aspect of your life; burnout in school for example can cause you to be exhausted in your social life, and negatively impact your life overall.</p> <br>
+            <p>Of course I have expereienced burnout with school like many others, but where I find burnout incredibly frusturating is creative burnout. I started to produce music as a hobby in sophomore year of highschool. Using a pirated version of FL Studio, I had fun creating silly beats and tracks and actually created things I thought that didn't sound half bad. As I created more, I found the process ever more freeing and relaxing as a creative outlet. As someone who used to be a visual artist but has created less over the years, it was amazing. </p> <br>
+            <p>As time went on, I found myself improving. I began to want to take this hobby of mine more seriously. I wanted to create things that were better and start sharing my music. But as I transitioned into taking music more seriously, I found that it wasn't as fun as it used to be. The things that I created, I became less happy with. I became overcritical over my work, which led to me being more frusturated, which led to me wanting to create less. Eventually I thought everything I made was bad, so I stopped.</p>
+        </div>
+        <div class="comments">
+            <h1>Comment Section</h1>
+            <ul id="commentList"></ul>
+            <form id="commentForm">
+                <textarea id="commentText" placeholder="Leave a comment!" required></textarea>
+                <textarea id="commentName" placeholder="Name" required></textarea>
+                <br>
+                <button type="submit">Post!</button>
+            </form>
+        </div>
+    </main>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDj8hNodl7qCiTelyj__N-MU66824Jk2d0",
+            authDomain: "final-project-comments-d8668.firebaseapp.com",
+            projectId: "final-project-comments-d8668",
+            storageBucket: "final-project-comments-d8668.appspot.com",
+            messagingSenderId: "972053304876",
+            appId: "1:972053304876:web:fae8815584b6fe813f2389",
+            measurementId: "G-1VLWWFV9SQ"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+    </script>
+    <script src="javascript/js.js"></script>
+    <script type = "module" src="javascript/comments.js"></script>
+</body>
+</html>

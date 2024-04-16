@@ -4,9 +4,23 @@ function menuHide(){
     hamMenu.classList.toggle("hidden")
 }
 
-// let blogItems = document.getElementsByClassName("blogItem");
-// for(var i = 0; i < blogItems.length; ++i){
-//     blogItems[i].addEventListener("click", function(){
-//         window.location.href
-//     })
-// }
+let currentSlide = 1;
+let slides = document.getElementsByClassName("slide");
+showSlide(1);
+
+
+function plusSlides(index){
+    showSlide(currentSlide+=index);
+}
+function showSlide(index){
+    if(index > slides.length){
+        currentSlide = 1
+    }
+    if(index < 1){
+        currentSlide = slide.length;
+    }
+    for(let i = 0; i < slides.length; ++i){
+        slides[i].style.display = 'none';
+    }
+    slides[currentSlide - 1].style.display = 'block';
+}

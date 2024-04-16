@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" text="text/css" href="css/reset.css">
-    <link rel="stylesheet" text="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title id="title">About Me</title>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-database-compat.js"></script>
+
 </head>
 <body>
     <header>
@@ -22,14 +25,40 @@
             <a href="music.html">Music</a>
             <a href="blogs.html">Blog</a>
             <a id="active" href="aboutme.html">About Me</a>
-            <a href="testpage.html">Test Page</a>
         </nav>
     </header>
-
-    <div class="slidinggallery">
-
-    </div>
-
+    <main class="blogContent">
+        <div>
+            <h1>About Me</h1>
+            <p>Hello! My name is Adrian Vergara, and this is my website!</p>
+            <img src="images/me.jpg" alt="me with a white labaradoodle">
+            <p>I am a sophomore at the University of Michigan. I am currently majoring in Computer Science at the College of Engineering with a minor in Data Science. My hobbies are video games, music production, and basketball. My favorite teams are the Detroit Pistons and Milwaukee Bucks. </p>
+        </div>
+        <div class="comments">
+            <h1>Comment Section</h1>
+            <ul id="commentList"></ul>
+            <form id="commentForm">
+                <textarea id="commentText" placeholder="Leave a comment!" required></textarea>
+                <textarea id="commentName" placeholder="Name" required></textarea>
+                <br>
+                <button type="submit">Post!</button>
+            </form>
+        </div>
+    </main>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDj8hNodl7qCiTelyj__N-MU66824Jk2d0",
+            authDomain: "final-project-comments-d8668.firebaseapp.com",
+            projectId: "final-project-comments-d8668",
+            storageBucket: "final-project-comments-d8668.appspot.com",
+            messagingSenderId: "972053304876",
+            appId: "1:972053304876:web:fae8815584b6fe813f2389",
+            measurementId: "G-1VLWWFV9SQ"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+    </script>
     <script src="javascript/js.js"></script>
+    <script type = "module" src="javascript/comments.js"></script>
 </body>
 </html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title id="title">Squirrel</title>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-database-compat.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>Adrian's <span style="color: #AA77F5">Website</span></h1>
+        <div class="hamDiv">
+            <button id="hamButt" onclick="menuHide()">
+                &#9776;
+            </button>
+        </div>
+        <div class="break"></div>
+        <nav id="menu" class="menu">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="music.html">Music</a>
+            <a href="blogs.html">Blog</a>
+            <a href="aboutme.html">About Me</a>
+        </nav>
+    </header>
+    <main class="blogContent">
+        <div>
+            <h1>Breaking News: Local Squirrel's Nut Eating Antics Cause Commotion</h1>
+            <p class="date">CHATGPT, April 15th 2024 DISCLAIMER: THIS IS AN AI GENERATED ARTICLE, I DID NOT WRITE THIS!</p>
+            <img src="images/IMG_6813.JPG" alt="mr. nutty eating a nut">
+            <p>Springfield – In an unexpected twist of events this morning in Springfield Park, a local squirrel has become the center of attention after being spotted engaging in what can only be described as an over-the-top nut-eating performance. Witnesses at the scene report that the furry creature, now affectionately named "Mr. Nutty," displayed an unusually human-like behavior as it tackled its breakfast.</p>
+            <br>
+            <p>At approximately 9:15 AM, joggers and dog walkers were stopped in their tracks by the sight of Mr. Nutty sitting upright on a park bench, holding a walnut in both hands with an air of sophistication that rivaled a diner at a high-end restaurant. Eyewitnesses claim the squirrel seemed to inspect the nut closely, turning it over several times, as if assessing the quality of a fine wine.</p>
+            <br>
+            <p>
+            “I’ve never seen anything like it,” said Martha Higgins, a local dog walker. “He was so picky! He tossed one nut aside and then picked up another, sniffing it like a connoisseur. When he finally chose one, he looked pleased as punch.”</p> <br>
+            <p>
+            The spectacle didn't end there. Once Mr. Nutty had selected his preferred walnut, he proceeded to crack it open with a precision that suggested years of nut-cracking experience. The crowd that had gathered couldn't help but laugh as the squirrel peered inside the cracked nut, shook his head in apparent approval, and began eating with what seemed like a grin.</p>
+            <br> <p>
+            Kevin Brooks, a jogger and amateur photographer, managed to capture the moment on his camera. “It was hilarious! He was eating with such gusto, and every now and then, he’d stop and look around as if to make sure everyone was watching him,” said Brooks. “He was like a little performer, showing off his nut-eating skills!”</p>
+            <br> <p>
+            Park officials have reported an increase in visitors carrying binoculars and cameras, hoping to catch a glimpse of Mr. Nutty in action. The park ranger, Tom Fletcher, advised, “While we love the attention Mr. Nutty is bringing to Springfield Park, we ask that visitors keep a respectful distance and not feed the wildlife. Let’s keep it safe and fun for everyone.”</p>
+            <br> <p>
+            As of now, Mr. Nutty continues his daily routine, seemingly unaware of his newfound fame, or perhaps simply too engrossed in his gastronomic pursuits. The park has become a hotspot for locals and tourists alike, all eager to witness the theatrical nut-eating habits of Springfield’s smallest celebrity.</p>
+            <br> <p>
+            Whether he’s a connoisseur of nuts or just a hungry squirrel with flair, Mr. Nutty has certainly brought a smile to many and provided a much-needed distraction from the everyday hustle and bustle. Stay tuned for more updates on Springfield’s most charismatic critter.</p>
+        </div>
+        <div class="comments">
+            <h1>Comment Section</h1>
+            <ul id="commentList"></ul>
+            <form id="commentForm">
+                <textarea id="commentText" placeholder="Leave a comment!" required></textarea>
+                <textarea id="commentName" placeholder="Name" required></textarea>
+                <br>
+                <button type="submit">Post!</button>
+            </form>
+        </div>
+    </main>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDj8hNodl7qCiTelyj__N-MU66824Jk2d0",
+            authDomain: "final-project-comments-d8668.firebaseapp.com",
+            projectId: "final-project-comments-d8668",
+            storageBucket: "final-project-comments-d8668.appspot.com",
+            messagingSenderId: "972053304876",
+            appId: "1:972053304876:web:fae8815584b6fe813f2389",
+            measurementId: "G-1VLWWFV9SQ"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+    </script>
+    <script src="javascript/js.js"></script>
+    <script type = "module" src="javascript/comments.js"></script>
+</body>
+</html>
