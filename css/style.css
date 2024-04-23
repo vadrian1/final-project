@@ -19,18 +19,22 @@ header h1{
 }
 body{
     background-color: #181818;
-    /* background: rgb(0,0,0); */
-    background: linear-gradient(20deg, rgba(24,24,24,1) 0%, rgba(24,24,24,1) 89%, rgba(57,12,87,1) 100%);
-    background-attachment: fixed;
+    background-color: #181818;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+    background-repeat: repeat;
+
 }
 footer{
-    height: 100px;
-    background-color: #7f36db;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    background-color: #AA77F5;
+    padding: 10px;
 }
 footer h2{
-    color: #eee0ff;
+    color: white;
     text-align: center;
     font-size: 40px;
+    margin-bottom: 10px;
 }
 .menu{
     display: flex;
@@ -104,9 +108,9 @@ h2{
 ul {
     margin: 5%;
 }
-.projects li{
-    display: grid;
-    grid-template-columns: 1fr 3fr 5fr;
+.projects > li{
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     color: #eee0ff;
     row-gap: 20px;
@@ -119,21 +123,24 @@ li + li{
     padding: 5%;
 }
 .imgDiv{
+    max-height: 400px;
     text-align: center;
-    background-color: #7f36db;
-    height: 200px;
+    /* background-color: #7f36db; */
+    min-height: 200px;
+    overflow: hidden;
+    text-align: center;
 }
-/* .blogContent > div{
-    background-color: #272727;
-    color: white;
-    margin: 3%;
-    border-radius: 5px;
-    padding: 30px;
-    border: 1px solid #4e4e4e;
-} */
+.imgDiv img{
+    margin: 0;
+    object-fit: cover;
+}
+
 .blogContent > div{
+    background-color: #181818;
     padding: 30px;
     color: white;
+    border-left: 2px #434343 solid;
+    border-right: 2px #434343 solid;
 }
 .blogContent h1{
     padding: 6px;
@@ -141,6 +148,37 @@ li + li{
 }
 .date{
     font-style: italic;
+}
+.caption{
+    color:#eee0ff;
+    font-size: 12px;
+}
+#Artists{
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1px;
+}
+#Artists > div{
+    position: relative;
+    height: 500px;
+    max-height: 500px;
+}
+#Artists img{
+    margin: 0px;
+    object-fit: cover;
+    height: 500px;
+}
+#Artists h2{
+    font-style: italic;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-weight: bold;
+    color:black;
+}
+h2#bea{
+    right: 20px;
 }
 button{
     background-color: #7f36db;
@@ -164,7 +202,7 @@ button:active{
 }
 .blogItem{
     flex: 1 0 250px;
-    max-width: 300px;
+    max-width: 500px;
     height: fit-content;
     background-color:#252227;
     width: 80%;
@@ -200,9 +238,18 @@ button:active{
     height: 100%;
     width: 100%;
 }
-.slidingggallery{
+.homeDiv{
+    color: white;
+    padding: 20px;
+}
+.homeDiv a{
+    color: #AA77F5;
+}
+.slidinggallery{
+    position: relative;
     width: 100%;
-    height: 900px;
+    height: 700px;
+    border-bottom: 3px solid #AA77F5;
 }
 .slidinggallery h1{
     color: white;
@@ -211,12 +258,12 @@ button:active{
 .slide img{
     width: 100%;
     object-fit: cover;
-    height: 900px;
+    height: 700px;
     max-height: unset;
     margin: unset;
 }
 .slide{
-    height: 900px;
+    height: 50%;
     display: none;
     position: relative;
 }
@@ -237,6 +284,16 @@ button:active{
     top: 50px;
     left: 50px;
 }
+
+.fa{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    color: white;
+    font-size: 50px;
+    text-decoration: none;
+}
+
 .fade{
     animation-name: fade;
     animation-duration: .5s;
@@ -276,7 +333,9 @@ button:active{
 #burn{
     background-image: url("https://images.unsplash.com/photo-1501772418-b33899635bca?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
-
+#playoffs{
+    background-image: url("https://media.gettyimages.com/id/2149767993/photo/denver-colorado-jamal-murray-of-the-denver-nuggets-puts-up-a-last-second-shot-against-anthony.jpg?s=612x612&w=0&k=20&c=urpFVTHQA459ml7XWZNd3OCJk7-bC5D6OqWLmwfbPmw=");
+}
 
 /* Desktop view */
 @media screen and (min-width: 1200px) {
@@ -298,6 +357,13 @@ button:active{
         width: fit-content;
     }
     .blogContent > div{
+        margin: 0 20% 0 20%;
+    }
+    .projects > li{
+        display: grid;
+        grid-template-columns: 1fr 3fr 5fr;
+    }
+    .homeDiv{
         margin: 0 20% 0 20%;
     }
 }

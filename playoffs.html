@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title id="title">Playoffs</title>
+    <link rel="icon" type="images/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-database-compat.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>Adrian's <span style="color: #AA77F5">Website</span></h1>
+        <div class="hamDiv">
+            <button id="hamButt" onclick="menuHide()">
+                &#9776;
+            </button>
+        </div>
+        <div class="break"></div>
+        <nav id="menu" class="menu">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="music.html">Music</a>
+            <a href="blogs.html">Blog</a>
+            <a href="aboutme.html">About Me</a>
+        </nav>
+    </header>
+    <main class="blogContent">
+        <div >
+            <h1>2024 NBA Playoffs: Who I'm Rooting For and Why</h1>
+            <p class="date">Adrian Vergara, April 23th 2024</p>
+            <img src="https://media.gettyimages.com/id/2149767993/photo/denver-colorado-jamal-murray-of-the-denver-nuggets-puts-up-a-last-second-shot-against-anthony.jpg?s=612x612&w=0&k=20&c=urpFVTHQA459ml7XWZNd3OCJk7-bC5D6OqWLmwfbPmw=" alt="Jamal Murray's game winning shot over Anthony Davis">
+            <p class="caption">Jamal Murray's game winning shot over Anthony Davis yesterday put the Denver Nuggets up 101-99, 2-0 in the series (Matthew Stockman/Getty Images)</p> <br>
+            <p>The most exciting time for basketball fans is here: the 2024 NBA Playoffs are currently underway. As I'm writing this, just yesterday the Denver Nuggets and the New York Knicks took a 2-0 lead over their respective opponents in exciting down-to-the-wire games. Some of you may be wondering: who am I rooting for?</p><br>
+            <h2>The Milwaukee Bucks</h2>
+            <p>The team that I will be rooting for the most this post season is the Milwaukee Bucks! I have been a huge Giannis fan since he won MIP in 2017, and by extension I have been rooting for success for the Bucks. I am also a fan of Damian Lillard, so when they traded for him this off season I was beyond stoked. Of course, it has been a rocky season, but after Dame's performance in game 1, I am very excited to see how far they go in the playoffs.</p> <br>
+            <h2>The Denver Nuggets</h2>
+            <p>I'm not the biggest Jokic fan, or Jamal Murray fan, etc. but I am a fan of the way Denver plays basketball. It's just so fun to watch them in the post season. Amazing ball movement, clutch shooting, and resillience makes Denver must watch basketball. I am hoping for a Bucks Nuggets finals.</p><br>
+            <h2>The Dallas Mavericks</h2>
+            <p>The slander on Luka has gone too far. This man is a generational player, and it's time for thim to show everyone in the playoffs. This is one of the best teams he's had around him, and it would be amazing if he could go far.</p><br>
+            <h2>The Minnesota Timberwolves</h2>
+            <p>Anthony Edwards is ELECTRIFYING to watch. He has such confidence on the court, that you can't help but root for him. I also, oddly enough, want Rudy Gobert to succeed. People were giving so much hate to Minnesota for the Gobert trade. I thought it was a great step in the right direction. Instead of being a meddling team, they're actually making moves to try to contend, and it's paying off. I hope they make it far.</p><br>
+            <p>Well those are some of my picks on who I'm rooting for in the NBA playoffs. Leave yours down in the comments!</p>
+
+        </div>
+        <div class="comments">
+            <h1>Comment Section</h1>
+            <ul id="commentList"></ul>
+            <form id="commentForm">
+                <textarea id="commentText" placeholder="Leave a comment!" required></textarea>
+                <textarea id="commentName" placeholder="Name" required></textarea>
+                <br>
+                <button type="submit">Post!</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <h2>vadrian@umich.edu</h2>
+        <a href="https://www.instagram.com/a.l.vergara/" class="fa fa-instagram" style="font-size: 30px;"></a>
+        <a href="https://www.linkedin.com/in/adrian-lex-vergara-151739269/" class="fa fa-linkedin" style="font-size: 30px;"></a>
+        <a href="https://github.com/vadrian1" class="fa fa-github" style="font-size: 30px;"></a>
+    </footer>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDj8hNodl7qCiTelyj__N-MU66824Jk2d0",
+            authDomain: "final-project-comments-d8668.firebaseapp.com",
+            projectId: "final-project-comments-d8668",
+            storageBucket: "final-project-comments-d8668.appspot.com",
+            messagingSenderId: "972053304876",
+            appId: "1:972053304876:web:fae8815584b6fe813f2389",
+            measurementId: "G-1VLWWFV9SQ"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+    </script>
+    <script src="javascript/js.js"></script>
+    <script type = "module" src="javascript/comments.js"></script>
+    
+</body>
+</html>
